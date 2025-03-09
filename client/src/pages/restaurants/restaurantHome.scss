@@ -1,0 +1,96 @@
+// File: src/pages/restaurants/homepage.scss
+.homepage {
+  background: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  
+  .homepage-wrapper {
+      padding: 20px;
+  }
+
+  .categories-section {
+      margin-bottom: 40px;
+  }
+
+  .recommended-restaurants-section,
+  .restaurants-section {
+      margin-bottom: 40px;
+
+      .section-title {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 20px;
+          color: #1f2937;
+          text-align: center;
+      }
+
+      .restaurants-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 24px;
+          justify-content: center;
+          padding-right: 10px;
+      }
+
+      .restaurant-card {
+          background: #ffffff;
+          border-radius: 16px;
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          &:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+          }
+
+          .restaurant-image {
+              width: 100%;
+              height: 200px;
+              object-fit: cover;
+              border-top-left-radius: 16px;
+              border-top-right-radius: 16px;
+          }
+
+          .restaurant-info {
+              padding: 20px;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              
+              h2 {
+                  font-size: 1.5rem;
+                  font-weight: 600;
+                  color: #111827;
+                  margin-bottom: 8px;
+              }
+
+              p {
+                  font-size: 1rem;
+                  color: #6b7280;
+                  margin-bottom: 12px;
+                  max-height: 3em;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+              }
+
+              .rating {
+                  font-size: 1rem;
+                  font-weight: bold;
+                  color: #f59e0b;
+                  background: #fff3cd;
+                  padding: 4px 12px;
+                  border-radius: 20px;
+                  display: inline-block;
+              }
+          }
+      }
+  }
+}

@@ -1,0 +1,166 @@
+@import "../../styles/_global.scss";
+
+// Prevent scrolling on the body
+// body {
+//   overflow: hidden;
+// }
+
+// Main login container
+.login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bg-primary;
+  overflow: hidden;  // Prevents scrolling in this container
+
+  .login-wrapper {
+    width: 760px;
+    height: 570px;
+    background-color: white;
+    box-shadow: $box-shadow-dark;
+    display: flex;
+
+    // Left Section (Login Form)
+    .reg-wrap-left {
+      height: 100%;
+      width: 60%;
+      padding: 3rem;
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 100px;
+        }
+      }
+
+      h1 {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .error-message {
+        color: red;
+        font-size: 11px;
+        font-weight: bold;
+        background: #ffe6e6;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid red;
+        margin-top: 10px;
+        text-align: center;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      
+      
+
+      .login-form {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: $font-size-option;
+          margin: 0.5rem;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.8rem;
+          font-size: $font-size-small;
+          color: black;
+          border: none;
+          outline: none;
+          background-color: rgba(211, 211, 211, 0.315);
+          border-radius: $border-radius-light;
+          margin-bottom: 1rem;
+        }
+
+        // Password Input with Icon
+        .pass-div {
+          width: 100%;
+          height: max-content;
+          background-color: rgba(211, 211, 211, 0.315);
+          border-radius: $border-radius-light;
+          display: flex;
+          align-items: center;
+          padding: 0.2rem;
+
+          input {
+            width: 90%;
+            background-color: transparent !important;
+            margin: 0;
+          }
+
+          .icon {
+            width: 10%;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+
+        // Login Button
+        .button {
+          display: block;  // Ensures it takes full width of its container
+          margin: 2rem auto;  // Auto centers it horizontally
+          width: 9rem;
+          color: white;
+          font-size: $font-size-small;
+          font-weight: $font-weight-medium;
+          border: none;
+          background-color: $bg-fill-color-1;
+          padding: 0.6rem;
+          //margin: 1rem 0;
+          border-radius: $border-radius-high;
+          cursor: pointer;
+          transition: 0.1s ease-in-out;
+
+          &:hover {
+            background: $bg-fill-color-1-hover;
+          }
+        }
+
+        // Bottom Links (e.g., Forgot Password, Register)
+        .left-bottom {
+          p {
+            text-align: center;
+            color: grey;
+            font-size: 12px;
+            margin: 0rem;
+            span {
+              color: #0067b6;
+              cursor: pointer;
+
+              &:hover {
+                color: #0087b6;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Right Section (Background or Additional Content)
+    .reg-wrap-right {
+      width: 45%;
+      height: 100%;
+      background-color: teal;
+    }
+  }
+}

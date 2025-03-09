@@ -1,0 +1,44 @@
+@import "../../styles/global";
+
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Ensures navbar is on top */
+  background-color: grey; // temp color
+
+  .navbar {
+    width: 100%;
+    height: 70px;
+    background-color: $bg-secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers logo horizontally */
+
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-logo {
+    height: 70px;
+    margin: 0em auto;
+  }
+
+  /* Ensuring menu and content are placed below navbar */
+  .content {
+    display: flex;
+    flex: 1; /* Takes up remaining space */
+    width: 100%;
+    height: calc(100vh - 60px); /* Remaining height after navbar */
+  }
+
+  .menu {
+    width: 6%;
+    height: 90%;
+  }
+
+  .menu-items {
+    width: 94%;
+    height: 90%;
+  }
+}

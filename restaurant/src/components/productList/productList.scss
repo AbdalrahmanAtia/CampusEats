@@ -1,0 +1,128 @@
+@import "../../styles/global";
+
+// Product List Container
+.productlist {
+  width: 100%;
+  height: 120%;
+  background-color: $bg-secondary;
+
+  // Wrapper for Product List
+  .product-list-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto !important;
+    background-color: $bg-primary;
+    color: $text-primary;
+
+    // Header of Product List
+    .head {
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        font-size: $font-size-xl;
+      }
+
+      input {
+        outline: none !important;
+        border: none;
+        background-color: $bg-fill-secondary;
+        border-radius: $border-radius-medium;
+        padding: 1em;
+        font-size: $font-size-option;
+        color: $text-primary;
+      }
+    }
+
+    // Scrollable List Area
+    .product-list-scroll {
+      width: 100%;
+      height: calc(100% - 9rem);
+      overflow-y: auto;
+    }
+
+    // Header for Product List (Sticky)
+    .product-list-header {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      justify-items: center;
+      gap: 1em;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background-color: $bg-primary;
+      padding-bottom: 0.5em;
+      font-size: $font-size-header;
+      color: $text-2-primary;
+      z-index: 10;
+    }
+  }
+}
+
+// Individual Product Item
+.product-list-child {
+  width: auto;
+  border: 1px solid rgba(128, 128, 128, 0.116);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: start;
+  align-items: center;
+  margin: 0.5em 1em;
+  padding: 0.5em 2em;
+  gap: 1em;
+
+  // Input and Textarea Styling
+  input,
+  textarea {
+    outline: none;
+    width: max-content;
+    border: none;
+    background-color: $bg-fill-secondary;
+    color: white;
+    font-size: $font-size-base;
+    padding: 0.5em;
+    border-radius: $border-radius-light;
+  }
+
+  // Product Name and Image Container
+  .product-name-image {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    img {
+      width: 4em;
+      height: 4em;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  // Product Price Styling
+  .product-price {
+    display: flex;
+    align-items: center;
+  }
+
+  // User Update Section with Icons
+  .user-update {
+    display: flex;
+    gap: 0.5em;
+    
+    .icon {
+      font-size: $font-size-header;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:nth-child(1) {
+        color: teal;
+      }
+
+      &:nth-child(2) {
+        color: red;
+      }
+    }
+  }
+}
